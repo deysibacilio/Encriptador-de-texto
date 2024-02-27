@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="proyecto.css">
+        <link rel="stylesheet" href="reset.css">
+        <title>Encriptador de Texto</title>
+
+    </head>
+    <body>
+        <header>
+            <div class="principal">
+                <a class="texto-principal"><strong>ENCRIPTADOR DE TEXTO</strong></a>
+            </div>
+
+        </header>
+
+        <main>
+            <div class="logo-container">
+                <img class="Logo" src="Logo.png" alt="Logo" onclick="restablecer()">
+                <p class="texto-logo">INICIAR<br> REINICIAR</p>
+            </div>
+            <div class="caja-izquierda">
+                <div contenteditable="" class="cuadro1" id="entrada" oninput="patron(this)" 
+                    onkeypress="return (event.charCode >= 97 &amp &amp, event.charCode <= 122 || event.charCode == 32)" inputmode="text" autocorrect="off" autocapitalize="none">
+                </div>
+                <!-- <textarea class="cuadro1" name="entrada" id="entrada" type="texto" cols="50" rows="20" placeholder="Ingrese el texto aquí"></textarea> -->
+                <div class="botones">
+                    <p class="parrafo"><span class="simbolo">!</span> solo letras minusculas y sin acentos</p>
+                    <div class="area-de-botones">
+                        <button onclick="encriptar()" class="boton1" id="encriptar">Encriptar</button>
+                        <button onclick="desencriptar()" class="boton2"  id="desencriptar">Desencriptar</button>
+                    </div>
+                </div>
+            </div>
+
+            </div class="caja-derecha">   
+                <div class="salida">
+                    <div class="salida-con-datos"><div readonly="" class="area-salida" id="salida"></div></div>
+                    <!-- <div class="salida-con-datos"><textarea readonly class="area-salida" name="area-salida" id="salidaTexto" cols="70" rows="20">Aqui se visualizara el texto encriptado</textarea></div> -->
+                    <div class="salida-sin-datos"><img src="cone-comiendo.gif" class="imagen"><a>Ningún mensaje fue encontrado</a><b>Ingresa el texto que desees encriptar o desencriptar.</b></div>
+                    <div class="botones">
+                        <div class="area-de-botones">
+                            <button id="copiar" onclick="copiar()" class="boton3">Copiar Texto</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="proyecto.js"></script>
+        <footer>
+            <div class="piePagina">
+            <p class="pie-de-pagina">&copy Deysi Bacilio - 2024</p> 
+            </div>
+        </footer>
+    </body>
+</html>
